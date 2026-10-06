@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void main()
+{
+    int a, b, multi;
+
+    printf("Enter first number: ");
+    scanf("%d", &a);
+
+    printf("Enter second number: ");
+    scanf("%d", &b);
+
+    multi = a * b;
+
+    printf("Multiplication = %d", multi);
+}
