@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void main()
+{
+    int shirt, shoes, total;
+
+    printf("Enter shirt price: ");
+    scanf("%d", &shirt);
+
+    printf("Enter shoes price: ");
+    scanf("%d", &shoes);
+
+    total = shirt + shoes;
+
+    printf("Total Shopping Bill = %d", total);
+}
