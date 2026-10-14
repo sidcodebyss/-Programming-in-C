@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void main()
+{
+    int score, level, total;
+
+    printf("Enter score: ");
+    scanf("%d", &score);
+
+    printf("Enter level multiplier: ");
+    scanf("%d", &level);
+
+    total = score * level;
+
+    printf("Final Game Score = %d", total);
+}
