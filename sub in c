@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void main()
+{
+    int money, spent, remaining;
+
+    printf("Enter pocket money: ");
+    scanf("%d", &money);
+
+    printf("Enter money spent: ");
+    scanf("%d", &spent);
+
+    remaining = money - spent;
+
+    printf("Remaining Money = %d", remaining);
+}
