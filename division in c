@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main()
+{
+    int pizza, friends, each;
+
+    printf("Enter number of pizza slices: ");
+    scanf("%d", &pizza);
+
+    printf("Enter number of friends: ");
+    scanf("%d", &friends);
+
+    if (friends > 0)
+    {
+        each = pizza / friends;
+        printf("Slices per friend = %d", each);
+    }
+    else
+    {
+        printf("Invalid number of friends");
+    }
+}
