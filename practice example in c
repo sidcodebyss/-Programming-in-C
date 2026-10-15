@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    float distance, fuel, mileage;
+
+    printf("Enter distance travelled (km): ");
+    scanf("%f", &distance);
+
+    printf("Enter fuel used (litres): ");
+    scanf("%f", &fuel);
+
+    if (fuel > 0 && distance >= 0)
+    {
+        mileage = distance / fuel;
+        printf("Vehicle mileage = %.2f km/litre", mileage);
+    }
+    else
+    {
+        printf("Invalid input");
+    }
+
+    return 0;
+}
