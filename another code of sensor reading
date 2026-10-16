@@ -1,0 +1,16 @@
+int main()
+{
+    int sensor[5];
+    int i;
+
+    printf("Enter 5 IR sensor values (0 or 1):\n");
+
+    for (i = 0; i < 5; i++)
+    {
+        scanf("%d", &sensor[i]);
+    }
+
+    printf("Robot Direction: %s\n", checkLine(sensor));
+
+    return 0;
+}
