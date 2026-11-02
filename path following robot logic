@@ -1,0 +1,89 @@
+#include <stdio.h>
+#include <conio.h>
+#include <dos.h>
+
+void main()
+{
+    int i, j;
+    int carPosition = 0;
+
+    clrscr();
+
+    textcolor(YELLOW);
+    gotoxy(25, 2);
+    cprintf("LINE FOLLOWER ROBOT");
+
+    textcolor(LIGHTGREEN);
+    gotoxy(8, 5);
+    cprintf("START");
+
+    gotoxy(65, 5);
+    cprintf("END");
+
+    /* Road boundaries */
+
+    for(i = 7; i <= 23; i++)
+    {
+        gotoxy(5, i);
+        cprintf("|");
+
+        gotoxy(75, i);
+        cprintf("|");
+    }
+
+    /* Black line in the middle of road */
+
+    for(i = 8; i <= 22; i++)
+    {
+        gotoxy(40, i);
+        textcolor(WHITE);
+        cprintf("#");
+    }
+
+    /* Robot movement */
+
+    for(i = 8; i <= 20; i++)
+    {
+        /* Clear previous robot position */
+
+        gotoxy(35, i - 1);
+        cprintf("          ");
+
+        gotoxy(35, i);
+        textcolor(LIGHTCYAN);
+        cprintf("  _____");
+
+        gotoxy(35, i + 1);
+        cprintf(" | ROBOT|");
+
+        gotoxy(35, i + 2);
+        cprintf(" O-----O");
+
+        textcolor(YELLOW);
+        gotoxy(5, 25);
+        cprintf("Robot moving from START to END...");
+
+        delay(400);
+
+        if(kbhit())
+        {
+            getch();
+            break;
+        }
+    }
+
+    clrscr();
+
+    textcolor(LIGHTGREEN);
+    gotoxy(25, 10);
+    cprintf("ROBOT REACHED END POINT!");
+
+    gotoxy(25, 12);
+    cprintf("SIMULATION COMPLETED");
+
+    textcolor(WHITE);
+    gotoxy(20, 15);
+    cprintf("Press any key to exit...");
+
+    getch();
+}
