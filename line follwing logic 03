@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <conio.h>
+
+void main()
+{
+    int sensor[4][2] = {
+        {0, 0},
+        {1, 0},
+        {0, 1},
+        {1, 1}
+    };
+
+    int i, left, right;
+
+    clrscr();
+
+    printf("LINE FOLLOWING ROBOT");
+    printf("\nC LANGUAGE SIMULATION");
+    printf("\n--------------------------");
+
+    for(i = 0; i < 4; i++)
+    {
+        left = sensor[i][0];
+        right = sensor[i][1];
+
+        printf("\n\nLeft Sensor = %d", left);
+        printf("\nRight Sensor = %d", right);
+
+        if(left == 0 && right == 0)
+        {
+            printf("\nRobot Movement: FORWARD");
+        }
+        else if(left == 1 && right == 0)
+        {
+            printf("\nRobot Movement: LEFT");
+        }
+        else if(left == 0 && right == 1)
+        {
+            printf("\nRobot Movement: RIGHT");
+        }
+        else
+        {
+            printf("\nRobot Movement: STOP");
+        }
+    }
+
+    getch();
+}
